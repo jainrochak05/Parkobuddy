@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/slide navbar style.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body style="background-image: url('https://cdn.discordapp.com/attachments/919832473112834049/1052226873364582460/gabriella-sudjono-C43zQRa5GK0-unsplash.jpg');">
+	<div class="main" >  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+			
+			<div class="signup">
+				<form method="post" action="{{ url_for("signup")}}">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="name" placeholder="User name" required="">
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="Password" name="pass" placeholder="Password" required="">
+					<button>Sign up</button>
+					<p> <p><p> *An email will be sent with a unique code </p>
+				</form>
+			</div>
+
+			<div class="login">
+				<form method="post" action="{{ url_for("login")}}">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="text" name="nm" placeholder="Username" required="" >
+					<input type="password" name="pass" placeholder="Password" required="">
+					<input type="integer" name="uid" placeholder="Unique ID" required="">
+					<button>Login</button>
+					
+				</form>
+			</div>
+	</div>
+</body>
+</html>
